@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Планувальник туристичних маршрутів</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+    
+</head>
+<body>
+    <!-- Верхнє меню -->
+    <div id="menu">
+        <a href="index.html" class="earth"><img src="earth.png" alt="Карта"></a>
+        <a href="resorts_tours.html">Гарячі тури та курорти</a>
+        <a href="events.html">Цікаві події</a>
+        <a href="recommendations.html">Згенерувати план подорожі</a>
+		<button class="open-button" onclick="togglePopup()">Авторизація</button>
+    </div>
+<div class="popup" id="popup-1">
+	<div class="fon"></div>
+	<div class="content">
+		<div class="close-btn" onclick="togglePopup()">&times;</div>
+		<div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Реєстрація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>аба використайте свій E-mail для реєстрації</span>
+                <input type="text" placeholder="Ім'я" />
+                <input type="email" placeholder="E-mail" />
+                <input type="password" placeholder="Пароль" />
+                <button>Зареєструватися</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Авторизація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>або використовуйте свій профіль</span>
+                <input type="email" placeholder="Логін" />
+                <input type="password" placeholder="Пароль" />
+                <a href="#">Забули пароль?</a>
+                <button>Вхід</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Ласкаво просимо, мандрівнику!</h1>
+                    <p>Щоб залишатися на зв'язку з нами, будь ласка, увійдіть до системи з вашою особистою інформацією</p>
+                    <button class="ghost" id="signIn">Авторизація</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Привіт, друже!</h1>
+                    <p>Введіть свої особисті дані та почніть подорож разом з нами</p>
+                    <button class="ghost" id="signUp">Реєстрація</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</div >
+<div class="itinerary_generator">
+    <h1>Генератор маршруту</h1>
+    <p>Використовуй генератор маршрутів, щоб відкривати для себе нові місця і незабутні пригоди! Він підготує для тебе унікальний план подорожі, який враховуватиме твої уподобання, бюджет та інтереси.</p>    
+    <hr>
+    <form>
+        <div class="container2">
+        <label for="city-country">Бажане місто/країна:</label><br>
+        <input type="text" id="input city-country" name="city-country" min="1" placeholder="Введіть деталі місця призначення та подорожі, будьте якомога точнішими."><br>
+
+        <label for="travellers">Кількість мандрівників:</label><br>
+        <input type="text" id="input travellers" name="travellers" min="1" placeholder="Скільки мандрівників буде в цій подорожі?"><br>
+
+        <label for="duration">Тривалість поїздки:</label><br>
+        <input type="text" id="input duration" name="duration" min="1" placeholder="Скільки триватиме ця подорож? (у днях)"><br>
+
+        <label for="interests">Інтереси та діяльність:</label><br>
+        <input type="text" id="interests" name="interests" placeholder="Які ваші основні інтереси під час цієї подорожі? (наприклад: екскурсії, їжа, мистецтво, історія, природа)"></input><br>
+
+        <label for="budget">Загальний бюджет($) :</label><br>
+        <input type="text" id="input budget" name="budget" min="1" placeholder="Введіть єдине значення або діапазон загального бюджету поїздки. (наприклад: $5000 або $4000-$6000)"><br>
+
+        <label for="notes">Додаткові нотатки:</label><br>
+        <input type="text" id="notes" name="notes" placeholder="Будь-які інші деталі, переваги чи особливі вимоги, які ви хотіли б включити"></input><br>
+
+        <a href="" class="glow-button">Згенерувати</a>
+    </div>
+    </form>
+</div>
+       <script src="script.js"></script>
+</body>
+</html>

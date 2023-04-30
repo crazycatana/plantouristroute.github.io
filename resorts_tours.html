@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Планувальник туристичних маршрутів</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+    
+</head>
+<body>
+    <!-- Верхнє меню -->
+    <div id="menu">
+        <a href="index.html" class="earth"><img src="earth.png" alt="Карта"></a>
+        <a href="resorts_tours.html">Гарячі тури та курорти</a>
+        <a href="events.html">Цікаві події</a>
+        <a href="recommendations.html">Згенерувати план подорожі</a>
+		<button class="open-button" onclick="togglePopup()">Авторизація</button>
+    </div>
+<div class="popup" id="popup-1">
+	<div class="fon"></div>
+	<div class="content">
+		<div class="close-btn" onclick="togglePopup()">&times;</div>
+		<div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Реєстрація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>аба використайте свій E-mail для реєстрації</span>
+                <input type="text" placeholder="Ім'я" />
+                <input type="email" placeholder="E-mail" />
+                <input type="password" placeholder="Пароль" />
+                <button>Зареєструватися</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Авторизація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>або використовуйте свій профіль</span>
+                <input type="email" placeholder="Логін" />
+                <input type="password" placeholder="Пароль" />
+                <a href="#">Забули пароль?</a>
+                <button>Вхід</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Ласкаво просимо, мандрівнику!</h1>
+                    <p>Щоб залишатися на зв'язку з нами, будь ласка, увійдіть до системи з вашою особистою інформацією</p>
+                    <button class="ghost" id="signIn">Авторизація</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Привіт, друже!</h1>
+                    <p>Введіть свої особисті дані та почніть подорож разом з нами</p>
+                    <button class="ghost" id="signUp">Реєстрація</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</div >
+<div class="itinerary_generator">
+    <h1>Турпакети</h1>
+    <p>Переглядайте підібрані маршрути та тури від професійних туроператорів у даній колекції.</p>    
+    <hr>
+    <div class="container3">
+        <div class="card">
+            <a href="https://www.bookmundi.com/maun/wildlife-and-wilderness-of-botswana-8002?">
+            <img src="tour1.jpg" alt="tour 1">
+            <h2 class="card-title">Сафарі в Ботсвані- екскурсія з гідом</h2>
+            <p class="card-location">Ботсвана</p>
+            <p class="card-date">Тривалість подорожі: 14 днів</p>
+            <p class="card-price">Ціна: від $4400</p>
+        </a></div>
+         
+        <div class="card">
+            <a href="https://yesgetaways.com/en-us/deals/detail/code/us-bcn-pmi-mad?origin=MIA&idRoute=9538&ref=Deals+Search+Results">
+            <img src="tour4.jpg" alt="tour 4">
+            <h2 class="card-title">Відпочинок у Барселоні, Майорці та Мадриді</h2>
+            <p class="card-location">Іспанія</p>
+            <p class="card-date">Тривалість подорожі: 10 днів</p>
+            <p class="card-price">Ціна: $1019</p>
+        </a></div>
+
+        <div class="card">
+            <a href="https://unforgettablegreece.com/luxury-greek-island-hopping">
+            <img src="tour5.jpg" alt="tour 5">
+            <h2 class="card-title">Розкішний тур грецькими островами</h2>
+            <p class="card-location">Афіни, Міконос, Наксос, Санторіні</p>
+            <p class="card-date">Тривалість подорожі: 11 днів</p>
+            <p class="card-price">Ціна: $6595</p>
+        </a></div>
+
+        <div class="card">
+            <a href="https://www.kensingtontours.com/tours/europe/france/france-grand-tou">
+            <img src="tour6.jpg" alt="tour 6">
+            <h2 class="card-title">Гранд-тур Францією, Відпочинок з гідом</h2>
+            <p class="card-location">Франція</p>
+            <p class="card-date">Тривалість подорожі: 14днів</p>
+            <p class="card-price">Ціна: $11899</p>
+        </a></div>
+
+        <div class="card">
+            <a href="https://www.bookmundi.com/toronto/best-of-the-western-arctic-canada-and-greenland-27474?">
+            <img src="tour2.jpg" alt="tour 2">
+            <h2 class="card-title">Західно-арктична експедиція</h2>
+            <p class="card-location">Канада, Гренландія, Арктика</p>
+            <p class="card-date">Тривалість подорожі: 20 днів</p>
+            <p class="card-price">Ціна: $17746</p>
+          </a></div>
+          <div class="card">
+            <a href="https://www.epikdrives.com/france-driving-holiday">
+            <img src="tour3.jpg" alt="tour 3">
+            <h2 class="card-title">Подорож на суперкарі півднем Франції"</h2>
+            <p class="card-location">Франція</p>
+            <p class="card-date">Тривалість подорожі: 4-7 днів</p>
+            <p class="card-price">Ціна: $5700</p>
+       </a> </div>  
+
+    </div>
+</div>
+       <script src="script.js"></script>
+</body>
+</html>

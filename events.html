@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Планувальник туристичних маршрутів</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+    
+</head>
+<body>
+    <!-- Верхнє меню -->
+    <div id="menu">
+        <a href="index.html" class="earth"><img src="earth.png" alt="Карта"></a>
+        <a href="resorts_tours.html">Гарячі тури та курорти</a>
+        <a href="events.html">Цікаві події</a>
+        <a href="recommendations.html">Згенерувати план подорожі</a>
+		<button class="open-button" onclick="togglePopup()">Авторизація</button>
+    </div>
+<div class="popup" id="popup-1">
+	<div class="fon"></div>
+	<div class="content">
+		<div class="close-btn" onclick="togglePopup()">&times;</div>
+		<div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Реєстрація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>аба використайте свій E-mail для реєстрації</span>
+                <input type="text" placeholder="Ім'я" />
+                <input type="email" placeholder="E-mail" />
+                <input type="password" placeholder="Пароль" />
+                <button>Зареєструватися</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Авторизація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>або використовуйте свій профіль</span>
+                <input type="email" placeholder="Логін" />
+                <input type="password" placeholder="Пароль" />
+                <a href="#">Забули пароль?</a>
+                <button>Вхід</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Ласкаво просимо, мандрівнику!</h1>
+                    <p>Щоб залишатися на зв'язку з нами, будь ласка, увійдіть до системи з вашою особистою інформацією</p>
+                    <button class="ghost" id="signIn">Авторизація</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Привіт, друже!</h1>
+                    <p>Введіть свої особисті дані та почніть подорож разом з нами</p>
+                    <button class="ghost" id="signUp">Реєстрація</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</div >
+<div class="itinerary_generator">
+   
+    <h1>Цікаві події та концерти</h1>
+
+    <div class="container3">
+        <div class="card">
+            <a href="https://www.stubhub.com/kentucky-derby-louisville-tickets-5-6-2023/event/150480559/?quantity=2">
+            <img src="event4.jpg" alt="Event 4">
+            <h2 class="card-title">149-е Кентукки Дербі</h2>
+            <p class="card-location">Черчиль-Даунс-Луїсвіль,Кентукки</p>
+            <p class="card-date">Дата: 12.05.2023</p>
+            <p class="card-price">Ціна: $50</p>
+        </a>
+    </div>
+
+        <div class="card">
+            <a href="https://www.stubhub.co.uk/wimbledon-tickets/grouping/8229/">
+            <img src="event5.jpg" alt="Event 5">
+            <h2 class="card-title">Чемпіонат Вімблдону 2023</h2>
+            <p class="card-location">Центральний корт, Великобританія</p>
+            <p class="card-date">Дата: 15.06.2023</p>
+            <p class="card-price">Ціна: $800</p>
+        </a>
+    </div>
+
+        <div class="card">
+            <a href="https://www.viagogo.com/Sports-Tickets/Formula-1/Monaco-F1-GP-Tickets/E-150256436">
+            <img src="event6.jpg" alt="Event 6">
+            <h2 class="card-title">Гран Прі Монако</h2>
+            <p class="card-location">Автодром Монте-Карло, Монако</p>
+            <p class="card-date">Дата: 22.07.2023</p>
+            <p class="card-price">Ціна: $60</p>
+        </a>
+    </div>
+        <div class="card">
+            <a href="">
+            <img src="event1.jpg" alt="Event 1">
+            <h2 class="card-title">Концерт "Coldplay"</h2>
+            <p class="card-location">Стадіон "Олімпійський", Київ</p>
+            <p class="card-date">Дата: 21.08.2023</p>
+            <p class="card-price">Ціна: $40</p>
+        </a>
+        </div>
+          <div class="card">
+            <a href="">
+            <img src="event2.jpg" alt="Event 2">
+            <h2 class="card-title">"Ромео і Джульєтта"</h2>
+            <p class="card-location">Театр опери та балету, Львів</p>
+            <p class="card-date">Дата: 05.07.2023</p>
+            <p class="card-price">Ціна: $25</p>
+        </a>
+    </div>
+
+          <div class="card">
+            <a href="">
+            <img src="event3.jpg" alt="Event 3">
+            <h2 class="card-title">Концерт "Любов до тебе"</h2>
+            <p class="card-location">Палац культури, Кременчук</p>
+            <p class="card-date">Дата: 05.07.2023</p>
+            <p class="card-price">Ціна: $17</p>
+        </a>
+    </div>  
+
+    </div>
+</div>
+       <script src="script.js"></script>
+</body>
+</html>

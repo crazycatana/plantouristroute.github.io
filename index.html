@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Планувальник туристичних маршрутів</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+    
+</head>
+<body>
+    <!-- Верхнє меню -->
+    <div id="menu">
+		<a href="index.html" class="earth"><img src="earth.png" alt="Карта"></a>
+        <a href="resorts_tours.html">Гарячі тури та курорти</a>
+        <a href="events.html">Цікаві події</a>
+        <a href="recommendations.html">Згенерувати план подорожі</a>
+		<button class="open-button" onclick="togglePopup()">Авторизація</button>
+    </div>
+<div class="popup" id="popup-1">
+	<div class="fon"></div>
+	<div class="content">
+		<div class="close-btn" onclick="togglePopup()">&times;</div>
+		<div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Реєстрація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>аба використайте свій E-mail для реєстрації</span>
+                <input type="text" placeholder="Ім'я" />
+                <input type="email" placeholder="E-mail" />
+                <input type="password" placeholder="Пароль" />
+                <button>Зареєструватися</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Авторизація</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>або використовуйте свій профіль</span>
+                <input type="email" placeholder="Логін" />
+                <input type="password" placeholder="Пароль" />
+                <a href="#">Забули пароль?</a>
+                <button>Вхід</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Ласкаво просимо, мандрівнику!</h1>
+                    <p>Щоб залишатися на зв'язку з нами, будь ласка, увійдіть до системи з вашою особистою інформацією</p>
+                    <button class="ghost" id="signIn">Авторизація</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Привіт, друже!</h1>
+                    <p>Введіть свої особисті дані та почніть подорож разом з нами</p>
+                    <button class="ghost" id="signUp">Реєстрація</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</div>
+
+    <!-- Карта -->
+    <div id="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325519.57590455643!2d30.203039031818054!3d50.40156973888671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNGX0LIsINCj0LrRgNCw0ZfQvdCwLCAwMjAwMA!5e0!3m2!1suk!2spl!4v1682597332680!5m2!1suk!2spl" width="100%"	height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+	
+	<script src="script.js"></script>
+</body>
+</html>
